@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <input type="text" id="izena" placeholder="Enter izena"></input>
+        <input type="text" id="abizena" placeholder="Enter abizena"></input>
+        <input type="button" id="bidali" onclick="izenAbizenak()"></input>
+        <p id="testoa"></p>
+        <script type="text/javascript">
+            function izenAbizenak(){
+                 var izena = document.getElementById("izena").value;
+                 var abizena = document.getElementById("abizena").value;
+                 document.getElementById("testoa").innerHTML = "kaixo "+izena+" "+abizena;
+
+            }
+
+            
+        </script>
+    </body>
+</html>

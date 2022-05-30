@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <script>
+            function kalkulagailua(){
+                var option = window.prompt("Elige una operacion\n1-Suma\n2-Resta\n3-Producto\n4-Division")
+                switch (option) {
+                    case '1':
+                        gehiketa();
+                        break;
+                    case '2':
+                        kenketa();
+                        break;
+                    case '3':
+                        hondarra();
+                        break;
+                    case '4':
+                        zatiketa();
+                        break;
+                    default:
+                        window.alert("Error: Unknown option");
+                        kalkulagailua();
+                        break;
+                }
+            }
+            function gehiketa(){
+                var zenbaki1 =window.prompt("Introduzca un numero")
+                var zenbaki2 =window.prompt("Introduzca otro numero")
+                window.alert(parseInt(zenbaki1)+parseInt(zenbaki2))
+            }
+            function kenketa(){
+                var zenbaki1 =window.prompt("Introduzca un numero")
+                var zenbaki2 =window.prompt("Introduzca otro numero")
+                window.alert(parseInt(zenbaki1)-parseInt(zenbaki2))
+            }
+            function hondarra(){
+                var zenbaki1 =window.prompt("Introduzca un numero")
+                var zenbaki2 =window.prompt("Introduzca otro numero")
+                window.alert(parseInt(zenbaki1)%parseInt(zenbaki2))
+            }
+            function zatiketa(){
+                var zenbaki1 =window.prompt("Introduzca un numero")
+                var zenbaki2 =window.prompt("Introduzca otro numero")
+                window.alert(parseInt(zenbaki1)/parseInt(zenbaki2))
+            }
+        </script>
+    </head>
+    <body>
+        <input type="button" value="erakutsi kalkulagailua" onclick="kalkulagailua()">
+    </body>
+
+</html>

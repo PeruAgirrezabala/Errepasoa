@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <input type="text" id="zenbakia1" placeholder="Enter zenbakia"></input>
+        <input type="text" id="zenbakia2" placeholder="Enter beste zenbakia"></input>
+        <input type="button" value="Submit" id="bidali" onclick="gehiketa()"></input>
+        <p id="gehiketa"></p>
+
+        <script type="text/javascript">
+            function gehiketa(){
+                 var zenbakia1 = document.getElementById("zenbakia1").value;
+                 var zenbakia2 = document.getElementById("zenbakia2").value;
+                 document.getElementById("gehiketa").innerHTML = parseInt(zenbakia1)+parseInt(zenbakia2);
+
+            }
+
+            
+        </script>
+    </body>
+</html>

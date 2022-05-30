@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <script>
+            function balidatu(){
+                const eremuak = ["izena","email","helbidea","telefonoa","herrialdea","Iruzkinak"]
+                for(let i=0;i<eremuak.length;i++){
+                    var x =document.forms["form"][eremuak[i]].value;
+                    if(x == ""){
+                        document.getElementById("abisua").innerHTML = "Mesedez bete"+eremuak[i]+"eremua";
+                        document.getElementById("abisua").style.color = "red";
+                        document.getElementById("abisua").style.fontSize = "35px";
+
+                        return false;
+                    }
+                }
+                var em = document.forms["form"]["email"].value;
+                if ((em.includes("@")) == false){
+                        document.getElementById("abisua").innerHTML = "E-mailak @ ikurra eduki behar du";
+                        document.getElementById("abisua").style.color = "red";
+                        document.getElementById("abisua").style.fontSize = "35px";  
+                        return false;
+                }
+                var tlf = document.forms["form"]["telefonoa"].value;
+                if((tlf.match(/[0-9]{9}/))==null){
+                    document.getElementById("abisua").innerHTML = "Telefonoak 9 zenbaki izan behar ditu.";
+                    document.getElementById("abisua").style.color= "red";
+                    document.getElementById("abisua").style.fontSize= "35px";
+                    return false;
+
+                }
+
+            }
+
+
+            function garbitu(){
+                document.getElementById("abisua").innerHTML= ""
+            }
+            
+
+        </script>
+    </head>
+    <body>
+        <form name="form"  method="post" action="/action_page.php" onreset="return garbitu()">
+            Izena: <input type="text" name="izena"> <br>
+            Email-a: <input type="text" name="email"> <br>
+            Helbidea: <input type="text" name="helbidea"> <br>
+            Telefonoa: <input type="text" name="telefonoa"> <br>
+            Herrialdea: <input type="text" name="herrialdea"> <br>
+            Iruzkinak: <input type="text" name="iruzkinak"> <br>
+            <input type="submit" value="Bidali">
+            <input type="reset" value="Garbitu">
+        </form>        
+        <p id="abisua"></p>
+    </body>
+</html>
